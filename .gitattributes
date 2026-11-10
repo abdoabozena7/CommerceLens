@@ -1,0 +1,2 @@
+# Keep the original dataset byte-for-byte for import hashes and tests.
+dataset/ad_click_dataset.csv -text

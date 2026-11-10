@@ -1,0 +1,27 @@
+@CommerceLens.Api_HostAddress = http://127.0.0.1:5080
+
+GET {{CommerceLens.Api_HostAddress}}/api/analytics/overview
+Accept: application/json
+
+###
+GET {{CommerceLens.Api_HostAddress}}/api/analytics/advertising?deviceType=Mobile&adPosition=Top
+
+###
+GET {{CommerceLens.Api_HostAddress}}/api/data/rows?page=1&pageSize=10
+
+###
+GET {{CommerceLens.Api_HostAddress}}/api/products
+
+###
+POST {{CommerceLens.Api_HostAddress}}/api/predictions
+Content-Type: application/json
+
+{
+  "deviceType": "Mobile",
+  "adPosition": "Top",
+  "browsingHistory": "Shopping",
+  "timeOfDay": "Morning"
+}
+
+###
+GET {{CommerceLens.Api_HostAddress}}/api/model/status
